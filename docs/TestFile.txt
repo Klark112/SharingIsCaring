@@ -1,4 +1,5 @@
-sVersion 1.0
-This is the first version of our testfile.
+Version 1.1
+This is the second version of our testfile.
 
 - edited by Ryan (rbrewer)
+- edited by Stuart (hoye)
