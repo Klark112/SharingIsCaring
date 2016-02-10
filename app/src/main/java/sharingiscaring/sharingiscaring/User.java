@@ -20,7 +20,17 @@ public class User {
 
 
     public User(){
-
+        this.name = "default";
+        this.ownedItems = new ArrayList<Item>();
+        this.otherItems = new ArrayList<Item>();
+        this.contact = "default";
+        this.phone = "default";
+        this.email = "default";
+        this.streetAddress = "default";
+        this.city = "default";
+        this.province = "default";
+        this.postalCode = "default";
+        this.password = "";
     }
 
     public String getName(){
