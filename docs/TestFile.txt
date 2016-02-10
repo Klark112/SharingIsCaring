@@ -1,2 +1,7 @@
-Version 1.0
-This is the first version of our testfile.
+Version 1.2
+This is the third version of our testfile.
+
+- edited by Ryan (rbrewer)
+- edited by Stuart (hoye)
+- edited by Klark (klark)
+- edited by yueran (yueran1)
