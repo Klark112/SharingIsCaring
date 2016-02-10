@@ -69,6 +69,7 @@ public class Item {
     public void addBid(Bid bid){
         this.bids.add(bid);
     }
-    public void clearBids(){
+    public void clearBids() {
         this.bids.clear();
+    }
 }
