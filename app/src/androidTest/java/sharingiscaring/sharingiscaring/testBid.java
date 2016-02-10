@@ -24,5 +24,7 @@ public class testBid extends ActivityInstrumentationTestCase2 {
         assertNotSame("Testing that the names are different",
                         bid1.getBidder().getName(),
                         bid2.getBidder().getName());
+        assertEquals(user1, bid1.getBidder());
+        assertEquals(user2, bid2.getBidder());
     }
 }

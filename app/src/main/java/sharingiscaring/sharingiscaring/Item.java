@@ -19,7 +19,12 @@ public class Item {
     public static final int RETURNED = 4;
 
     public Item(){
-
+        this.identifier = -1;
+        this.owner = new User();
+        this.title = "default";
+        this.description = "default";
+        this.status = AVAILABLE;
+        this.bids = new ArrayList<Bid>();
     }
 
     public Item(int identifier, User owner, String title, String description, ArrayList<Bid> bids){
