@@ -65,5 +65,18 @@ public class Server {
         return null;
     }
 
+    public Item searchItem(String terms){
+        return null;
+    }
+
+    public Boolean validateUsername(String username){
+        for (int i = 0; i < users.size(); i++){
+            User user = users.get(i);
+            if (user.getName() == username){
+                return Boolean.FALSE;
+            }
+        }
+        return Boolean.TRUE;
+    }
 
 }
