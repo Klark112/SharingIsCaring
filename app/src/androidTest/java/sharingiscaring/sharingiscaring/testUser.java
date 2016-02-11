@@ -1,6 +1,8 @@
 package sharingiscaring.sharingiscaring;
 
+import android.content.Intent;
 import android.test.ActivityInstrumentationTestCase2;
+import android.widget.TextView;
 
 /**
  * Created by hoye on 2/10/16.
@@ -101,4 +103,5 @@ public class testUser extends ActivityInstrumentationTestCase2 {
         user.update();
         assertFalse(server.getUser(user.getName()).getOwnedItems().isEmpty());
     }
+
 }

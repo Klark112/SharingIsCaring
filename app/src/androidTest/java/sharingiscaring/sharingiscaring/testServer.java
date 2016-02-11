@@ -9,4 +9,6 @@ public class testServer extends ActivityInstrumentationTestCase2 {
     public testServer(Class activityClass) {
         super(Server.class);
     }
+
+
 }

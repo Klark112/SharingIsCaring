@@ -1,7 +1,9 @@
 package sharingiscaring.sharingiscaring;
 
+import android.content.Intent;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
+import android.widget.TextView;
 
 /**
  * Created by hoye on 2/10/16.
@@ -59,4 +61,37 @@ public class testItem extends ActivityInstrumentationTestCase2{
         item.clearBids();
         assertTrue(item.getBids().isEmpty());
     }
+    public void testViewMyThings(){ // come back to after talking with stuart 01.02.01
+        Intent intent = new Intent();
+
+        setActivityIntent(intent);
+       // Item item = (Item)getActivity();
+
+        //TextView textView = (TextView) user.findViewById(R.id.intentText);
+       // assertEquals("The text should be displayed!", "default text",
+        //        textView.getText().toString());
+    }
+
+    public void testViewOneThing(){ // 01.03.01
+        Intent intent = new Intent();
+        setActivityIntent(intent);
+        //just setting up skeletal tests
+    }
+    public void testSearch(){ //where are we adding these items to that allows us to search for them 04.01.01
+        Server server = new Server();
+        Item item = new Item();
+    }
+
+    public void testItemDetails(){ // 04.02.01
+        Intent intent = new Intent();
+        setActivityIntent(intent);
+    }
+    public void testViewBorrowThings(){//06.01.01
+
+    }
+
+    public void testViewLoanedThings(){ //06.02.01 listed in the wiki under test cases as 06.01.01
+
+    }
+
 }
