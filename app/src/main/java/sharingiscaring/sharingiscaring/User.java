@@ -9,6 +9,7 @@ public class User {
     private String name;
     private ArrayList<Item> ownedItems;
     private ArrayList<Item> otherItems;
+    private ArrayList<Bid> notifications;
     private String contact;
     private String phone;
     private String email;
@@ -23,6 +24,7 @@ public class User {
         this.name = "default";
         this.ownedItems = new ArrayList<Item>();
         this.otherItems = new ArrayList<Item>();
+        this.notifications = new ArrayList<Bid>();
         this.contact = "default";
         this.phone = "default";
         this.email = "default";
@@ -42,6 +44,7 @@ public class User {
     public ArrayList<Item> getBorrowedItems(){
         return this.otherItems;
     }
+    public ArrayList<Bid> getNotifications() {return this.notifications; }
     public String getContact(){
         return this.contact;
     }
@@ -73,6 +76,7 @@ public class User {
     public void setOtherItems(ArrayList<Item> newItems){
         this.otherItems = newItems;
     }
+    public void setNotifications(ArrayList<Bid> newNotifications){ this.notifications = newNotifications;}
     public void setContact(String newContact){
         this.contact = newContact;
     }
@@ -104,7 +108,12 @@ public class User {
     public void returnItem(Item item){
         this.otherItems.remove(item);
     }
+    public void removeItem(Item item) {this.ownedItems.remove(item);}
     public void update(){
 
     }
+    public void bidNotify(Bid bid){
+        this.notifications.add(bid);
+    }
+
 }
