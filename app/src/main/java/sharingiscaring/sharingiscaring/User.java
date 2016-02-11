@@ -106,7 +106,11 @@ public class User {
         this.otherItems.add(item);
     }
     public void returnItem(Item item){
+        item.setStatus(Item.RETURNED);
         this.otherItems.remove(item);
+    }
+    public void validateReturn(Item item){
+        item.setStatus(Item.AVAILABLE);
     }
     public void removeItem(Item item) {this.ownedItems.remove(item);}
     public void update(){

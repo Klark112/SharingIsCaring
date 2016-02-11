@@ -33,6 +33,18 @@ public class testItem extends ActivityInstrumentationTestCase2{
         assertTrue(item.getStatus() == Item.BIDDING);
     }
 
+    public void testStatuses(){
+        Item item = new Item();
+        assertTrue(Item.AVAILABLE == item.getStatus());
+        item.setStatus(Item.BIDDING);
+        assertTrue(Item.BIDDING == item.getStatus());
+        item.setStatus(Item.BORROWED);
+        assertTrue(Item.BORROWED == item.getStatus());
+        item.setStatus(Item.RETURNED);
+        assertTrue(Item.RETURNED == item.getStatus());
+        item.setStatus(Item.BIDDING);
+    }
+
     public void testAddBid(){
         Item item = new Item();
         Bid bid = new Bid(new User(), 10.3);

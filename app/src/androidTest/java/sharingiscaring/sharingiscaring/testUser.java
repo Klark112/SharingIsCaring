@@ -55,4 +55,50 @@ public class testUser extends ActivityInstrumentationTestCase2 {
         user.bidNotify(bid);
         assertFalse((user.getNotifications().isEmpty()));
     }
+
+    public void testUsername(){
+        User user1 = new User();
+        User user2 = new User();
+        Server server = new Server();
+
+        server.addUser(user1);
+        assertFalse(server.validateUsername(user2));
+    }
+
+    public void testReturnThing(){
+        User user1 = new User();
+        User user2 = new User();
+        Item item = new Item();
+        item.setStatus(Item.BORROWED);
+        user1.addItem(item);
+        user2.borrow(item);
+
+        assertFalse(user1.getOwnedItems().isEmpty());
+        assertFalse(user2.getBorrowedItems().isEmpty());
+
+        user2.returnItem(item);
+
+        assertTrue(user2.getBorrowedItems().isEmpty());
+        assertTrue(item.getStatus() == Item.RETURNED);
+
+        user1.validateReturn(item);
+
+        assertTrue(Item.AVAILABLE == item.getStatus());
+    }
+
+    public void testUpdate(){
+        Server server = new Server();
+        User user = new User();
+        Item item1 = new Item();
+        Item item2 = new Item();
+        Item item3 = new Item();
+        server.addUser(user);
+        user.addItem(item1);
+        user.addItem(item2);
+        user.addItem(item3);
+
+        assertTrue(server.getUser(user.getName()).getOwnedItems().isEmpty());
+        user.update();
+        assertFalse(server.getUser(user.getName()).getOwnedItems().isEmpty());
+    }
 }

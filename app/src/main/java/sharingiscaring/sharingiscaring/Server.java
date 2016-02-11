@@ -69,9 +69,10 @@ public class Server {
         return null;
     }
 
-    public Boolean validateUsername(String username){
+    public Boolean validateUsername(User user){
+        String username = user.getName();
         for (int i = 0; i < users.size(); i++){
-            User user = users.get(i);
+            String othername = users.get(i).getName();
             if (user.getName() == username){
                 return Boolean.FALSE;
             }
