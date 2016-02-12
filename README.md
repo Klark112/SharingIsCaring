@@ -2,7 +2,7 @@
 # SharingIsCaring
 
 
-Coordinate with your pals to put together that perfect team and take on the fiercest boss together.  
+Coordinate with your pals and put together that perfect team and take on the fiercest boss together.  
 Maybe you have the perfect Pokémon, and it's sitting idly in your stable - hire it out as a mercenary to the highest bidder!  
 Perhaps you're just starting out on your Pokémon adventure and you just need that temporary edge.  Use our app to find a fellow user who can trade you the Pokémon that you need.  
 
