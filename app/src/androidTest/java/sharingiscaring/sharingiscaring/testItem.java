@@ -1,8 +1,12 @@
 package sharingiscaring.sharingiscaring;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
+import android.test.ViewAsserts;
+import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 
 /**
@@ -61,22 +65,30 @@ public class testItem extends ActivityInstrumentationTestCase2{
         item.clearBids();
         assertTrue(item.getBids().isEmpty());
     }
-    public void testViewMyThings(){ // come back to after talking with stuart 01.02.01
+
+    public void testViewMyThings(){
         Intent intent = new Intent();
 
         setActivityIntent(intent);
-       // Item item = (Item)getActivity();
+        ViewMyThingsActivity viewMe = (ViewMyThingsActivity) getActivity();
 
-        //TextView textView = (TextView) user.findViewById(R.id.intentText);
-       // assertEquals("The text should be displayed!", "default text",
-        //        textView.getText().toString());
+        View origin = (View) viewMe.findByViewId(R.id.viewMyThings);
+        View myThings = viewMe.getWindow().getDecorView();
+        ViewAsserts.assertOnScreen(origin, myThings);
     }
 
     public void testViewOneThing(){ // 01.03.01
         Intent intent = new Intent();
+        intent.putExtra(ViewOneThingActivity.POKEMON_NAME, "test name");
+        intent.putExtra(ViewOneThingActivity.POKEMON_DESCRIPTION, "test description");
+
         setActivityIntent(intent);
-        //just setting up skeletal tests
+        ViewOneThingActivity viewMe = (ViewOneThingActivity) getActivity();
+
+        assertEquals("test name", viewMe.getName());
+        assertEquals("test description", viewMe.getDescription());
     }
+
     public void testSearch(){ //where are we adding these items to that allows us to search for them 04.01.01
         Server server = new Server();
         Item item = new Item();
