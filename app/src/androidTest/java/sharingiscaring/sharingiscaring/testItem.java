@@ -66,16 +66,7 @@ public class testItem extends ActivityInstrumentationTestCase2{
         assertTrue(item.getBids().isEmpty());
     }
 
-    public void testViewMyThings(){
-        Intent intent = new Intent();
 
-        setActivityIntent(intent);
-        ViewMyThingsActivity viewMe = (ViewMyThingsActivity) getActivity();
-
-        View origin = (View) viewMe.findByViewId(R.id.viewMyThings);
-        View myThings = viewMe.getWindow().getDecorView();
-        ViewAsserts.assertOnScreen(origin, myThings);
-    }
 
     public void testViewOneThing(){ // 01.03.01
         Intent intent = new Intent();
