@@ -28,4 +28,22 @@ public class testViewMyThingsActivity extends ActivityInstrumentationTestCase2 {
         View origin = (View) viewMe.findByViewId(R.id.ViewMyThings);
         ViewAsserts.assertOnScreen(origin, thingsList);
     }
+
+    public void testViewOwnedBorrowedThings(){
+        Intent intent = new Intent();
+        User user = new User();
+        Item item1 = new Item();
+
+        item1.setStatus(Item.BORROWED);
+        user.addItem(item1);
+        intent.putExtra(ViewMyThingsActivity.MODE_TO_TRANSFER_KEY, user);
+        setActivityIntent(intent);  //onStart will populate the ListView
+
+
+        ViewMyThingsActivity viewMe = (ViewMyThingsActivity) getActivity();
+        ListView thingsList = (ListView) viewMe.findViewById(R.id.thingslist);
+
+        View origin = (View) viewMe.findByViewId(R.id.ViewMyThings);
+        ViewAsserts.assertOnScreen(origin, thingsList);
+    }
 }
