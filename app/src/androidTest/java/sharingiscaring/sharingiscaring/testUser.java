@@ -2,6 +2,8 @@ package sharingiscaring.sharingiscaring;
 
 import android.content.Intent;
 import android.test.ActivityInstrumentationTestCase2;
+import android.test.ViewAsserts;
+import android.view.View;
 import android.widget.TextView;
 
 /**
@@ -104,4 +106,25 @@ public class testUser extends ActivityInstrumentationTestCase2 {
         assertFalse(server.getUser(user.getName()).getOwnedItems().isEmpty());
     }
 
+    public void testViewOtherUser(){
+        Intent intent = new Intent();
+        Server server = new Server();
+        User user1 = new User();
+        User user2 = new User();
+        String testName = "non-default";
+
+        user2.setName(testName);
+        server.addUser(user1);
+        server.addUser(user2);
+        intent.putExtra(ViewOneThingActivity.USER_NAME, testName);
+        setActivityIntent(intent);
+
+        ViewOneThingActivity viewMe = (ViewOneThingActivity) getActivity();
+        TextView username = viewMe.findViewById(R.id.username);
+        viewMe.fetch(username.getText().toString());
+
+        View origin = (View) viewMe.findByViewId(R.id.viewOneThing);
+        View userInfo = viewMe.getWindow().getDecorView();
+        ViewAsserts.assertOnScreen(origin, userInfo);
+    }
 }
