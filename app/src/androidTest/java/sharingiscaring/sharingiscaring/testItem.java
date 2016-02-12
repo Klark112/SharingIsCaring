@@ -66,35 +66,14 @@ public class testItem extends ActivityInstrumentationTestCase2{
         assertTrue(item.getBids().isEmpty());
     }
 
-
-
-    public void testViewOneThing(){ // 01.03.01
-        Intent intent = new Intent();
-        intent.putExtra(ViewOneThingActivity.POKEMON_NAME, "test name");
-        intent.putExtra(ViewOneThingActivity.POKEMON_DESCRIPTION, "test description");
-
-        setActivityIntent(intent);
-        ViewOneThingActivity viewMe = (ViewOneThingActivity) getActivity();
-
-        assertEquals("test name", viewMe.getName());
-        assertEquals("test description", viewMe.getDescription());
-    }
-
-    public void testSearch(){ //where are we adding these items to that allows us to search for them 04.01.01
-        Server server = new Server();
-        Item item = new Item();
-    }
-
-    public void testItemDetails(){ // 04.02.01
-        Intent intent = new Intent();
-        setActivityIntent(intent);
-    }
-    public void testViewBorrowThings(){//06.01.01
-
-    }
-
-    public void testViewLoanedThings(){ //06.02.01 listed in the wiki under test cases as 06.01.01
-
+    public void testToString(){
+        User user = new User();
+        user.setName("Stuart");
+        Item item1 = new Item();
+        item1.setTitle("Name");
+        item1.setDescription("Description");
+        user.addItem(item1);
+        assertEquals("Name Description Stuart Available", item1.toString());
     }
 
 }
