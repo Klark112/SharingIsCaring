@@ -12,8 +12,15 @@
     tools:context="sharingiscaring.sharingiscaring.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Change"
+        android:id="@+id/change"
+        android:onClick="changes"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="43dp" />
+
 </RelativeLayout>
