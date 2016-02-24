@@ -21,14 +21,24 @@ public class MainActivity extends AppCompatActivity {
 
 
     //tell view button where to go
-    public void changes(View v){setContentView(R.layout.my_pc); }
+    public void changes(View v){setContentView(R.layout.add_pokemon_main); }
     //implement view button
     View.OnClickListener viewButton = new View.OnClickListener() {
         public void onClick(View v) {
-            setContentView(R.layout.my_pc);
+            setContentView(R.layout.add_pokemon_main);
             (findViewById(R.id.change)).setOnClickListener(viewButton);
         }
     };
+    //tell view button where to go
+    public void myPC(View v){setContentView(R.layout.my_pc); }
+    //implement view button
+    View.OnClickListener viewButton1 = new View.OnClickListener() {
+        public void onClick(View v) {
+            setContentView(R.layout.my_pc);
+            (findViewById(R.id.change)).setOnClickListener(viewButton1);
+        }
+    };
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

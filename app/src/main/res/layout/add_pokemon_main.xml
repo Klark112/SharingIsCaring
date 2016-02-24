@@ -1,42 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:layout_alignParentEnd="true"></android.support.design.widget.AppBarLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Pokemon Name"
+            android:id="@+id/pokemonName"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentStart="true" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/editName"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentEnd="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Pokemon Name"
-        android:id="@+id/pokemonName"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="72dp" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editDescription"
+            android:text="Description"
+            android:layout_alignTop="@+id/pokemonDescription"
+            android:layout_alignParentStart="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/editName"
-        android:layout_alignBottom="@+id/pokemonName"
-        android:layout_alignParentEnd="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Description"
+            android:id="@+id/pokemonDescription"
+            android:layout_below="@+id/editName"
+            android:layout_toEndOf="@+id/relativeLayout" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editDescription"
-        android:text="Description"
-        android:layout_below="@+id/pokemonDescription"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Ability"
+            android:id="@+id/ability"
+            android:layout_below="@+id/editDescription"
+            android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Description"
-        android:id="@+id/pokemonDescription"
-        android:layout_below="@+id/pokemonName"
-        android:layout_alignParentStart="true" />
-</RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Level"
+            android:id="@+id/level"
+            android:layout_below="@+id/ability"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Health Points"
+            android:id="@+id/healthPoints"
+            android:layout_below="@+id/level"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Attack"
+            android:id="@+id/attack"
+            android:layout_below="@+id/healthPoints"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Defense"
+            android:id="@+id/defense"
+            android:layout_below="@+id/attack"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Special Attack"
+            android:id="@+id/specialAttack"
+            android:layout_below="@+id/defense"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Special Defense"
+            android:id="@+id/specialDefense"
+            android:layout_below="@+id/specialAttack"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Speed"
+            android:id="@+id/speed"
+            android:layout_below="@+id/specialDefense"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Primary Type"
+            android:id="@+id/primaryType"
+            android:layout_below="@+id/speed"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Secondary Type"
+            android:id="@+id/secondaryType"
+            android:layout_below="@+id/primaryType"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Move1"
+            android:id="@+id/move1"
+            android:layout_below="@+id/secondaryType"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Move2"
+            android:id="@+id/move2"
+            android:layout_below="@+id/move1"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Move3"
+            android:id="@+id/move3"
+            android:layout_below="@+id/move2"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Move4"
+            android:id="@+id/move4"
+            android:layout_below="@+id/move3"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/nature"
+            android:layout_below="@+id/move4"
+            android:layout_alignParentStart="true"
+            android:text="Nature" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Pokemon Item"
+            android:id="@+id/pokemonItem"
+            android:layout_below="@+id/nature"
+            android:layout_alignParentStart="true" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:title="Show up"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/relativeLayout" />
+    </RelativeLayout>
+</ScrollView>

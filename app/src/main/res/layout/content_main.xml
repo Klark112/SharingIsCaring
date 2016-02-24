@@ -16,11 +16,18 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Change"
+        android:text="Add pokemon"
         android:id="@+id/change"
         android:onClick="changes"
+        android:layout_alignTop="@+id/change1"
+        android:layout_toEndOf="@+id/change1" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="myPC"
+        android:id="@+id/change1"
+        android:onClick="myPC"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="43dp" />
-
 </RelativeLayout>

@@ -1,55 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="sharingiscaring.sharingiscaring.MainActivity">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:layout_alignParentEnd="true"></android.support.design.widget.AppBarLayout>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="sharingiscaring.sharingiscaring.MainActivity">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="BorrowedBox"
+            android:id="@+id/borrowedBox"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="49dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="BorrowedBox"
-        android:id="@+id/borrowedBox"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="49dp" />
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/borrowedBoxList"
+            android:layout_below="@+id/borrowedBox"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/addPokemon" />
 
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/borrowedBoxList"
-        android:layout_below="@+id/borrowedBox"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/addPokemon" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="MyBox"
+            android:id="@+id/myBox"
+            android:layout_marginBottom="190dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="MyBox"
-        android:id="@+id/myBox"
-        android:layout_marginBottom="190dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Pokemon"
-        android:id="@+id/addPokemon"
-        android:layout_alignBottom="@+id/myBox"
-        android:layout_alignParentEnd="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Pokemon"
+            android:id="@+id/addPokemon"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
 
 
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:id="@+id/myBoxList"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/addPokemon"
-        android:layout_alignParentBottom="true" />
-</RelativeLayout>
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:id="@+id/myBoxList"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/addPokemon"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</ScrollView>
