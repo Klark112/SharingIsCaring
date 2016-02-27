@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener viewButton1 = new View.OnClickListener() {
         public void onClick(View v) {
             setContentView(R.layout.my_pc);
-            (findViewById(R.id.change)).setOnClickListener(viewButton1);
+            (findViewById(R.id.addPokemon)).setOnClickListener(viewButton1);
         }
     };
 

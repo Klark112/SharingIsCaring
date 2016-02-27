@@ -45,6 +45,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="AddPokemon"
             android:text="Add Pokemon"
             android:id="@+id/addPokemon"
             android:layout_below="@+id/viewBorrowedBox"
