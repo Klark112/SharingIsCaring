@@ -21,12 +21,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     //tell view button where to go
-    public void changes(View v){setContentView(R.layout.add_pokemon_main); }
+    public void AddPokemon(View v){setContentView(R.layout.add_pokemon_main); }
     //implement view button
     View.OnClickListener viewButton = new View.OnClickListener() {
         public void onClick(View v) {
             setContentView(R.layout.add_pokemon_main);
-            (findViewById(R.id.change)).setOnClickListener(viewButton);
+            (findViewById(R.id.change1)).setOnClickListener(viewButton);
         }
     };
     //tell view button where to go

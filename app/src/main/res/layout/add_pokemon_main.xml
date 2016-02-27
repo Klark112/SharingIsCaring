@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android">
     
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -33,22 +33,23 @@
             android:layout_below="@+id/toolbar"
             android:layout_alignParentEnd="true" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/editDescription"
-            android:text="Description"
-            android:layout_alignTop="@+id/pokemonDescription"
-            android:layout_alignParentStart="true" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Description"
-            android:id="@+id/pokemonDescription"
+            android:id="@+id/description"
             android:layout_below="@+id/editName"
-            android:layout_toEndOf="@+id/relativeLayout" />
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editDescription"
+            android:layout_below="@+id/editName"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/editName"
+            android:inputType="text"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -59,14 +60,31 @@
             android:layout_below="@+id/editDescription"
             android:layout_alignParentStart="true" />
 
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editAbility"
+            android:layout_below="@+id/editDescription"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/editName" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Level"
             android:id="@+id/level"
-            android:layout_below="@+id/ability"
+            android:layout_below="@+id/editAbility"
             android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editLevel"
+            android:layout_below="@+id/editAbility"
+            android:layout_alignStart="@+id/editName"
+            android:inputType="number"
+            android:layout_alignParentEnd="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -74,8 +92,16 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Health Points"
             android:id="@+id/healthPoints"
-            android:layout_below="@+id/level"
+            android:layout_below="@+id/editLevel"
             android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editHealthPoints"
+            android:layout_alignEnd="@+id/editName"
+            android:layout_alignStart="@+id/editName"
+            android:layout_below="@+id/editLevel" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -83,8 +109,16 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Attack"
             android:id="@+id/attack"
-            android:layout_below="@+id/healthPoints"
+            android:layout_below="@+id/editHealthPoints"
             android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editAttack"
+            android:layout_below="@+id/editHealthPoints"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/editName" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -92,8 +126,16 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Defense"
             android:id="@+id/defense"
-            android:layout_below="@+id/attack"
+            android:layout_below="@+id/editAttack"
             android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editDefense"
+            android:layout_below="@+id/editAttack"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/editName" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -101,8 +143,16 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Special Attack"
             android:id="@+id/specialAttack"
-            android:layout_below="@+id/defense"
+            android:layout_alignTop="@+id/editSpecialAttack"
             android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editSpecialAttack"
+            android:layout_below="@+id/editDefense"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/editName" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -110,8 +160,16 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Special Defense"
             android:id="@+id/specialDefense"
-            android:layout_below="@+id/specialAttack"
+            android:layout_below="@+id/editSpecialAttack"
             android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editSpecialDefense"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/editName"
+            android:layout_alignTop="@+id/specialDefense" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -119,8 +177,16 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Speed"
             android:id="@+id/speed"
-            android:layout_below="@+id/specialDefense"
-            android:layout_alignParentStart="true" />
+            android:layout_below="@+id/editSpecialDefense"
+            android:layout_alignStart="@+id/specialAttack" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editSpeed"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/editName"
+            android:layout_alignTop="@+id/speed" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -128,8 +194,16 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Primary Type"
             android:id="@+id/primaryType"
-            android:layout_below="@+id/speed"
+            android:layout_below="@+id/editSpeed"
             android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editPrimaryType"
+            android:layout_alignTop="@+id/primaryType"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/editName" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -137,8 +211,16 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Secondary Type"
             android:id="@+id/secondaryType"
-            android:layout_below="@+id/primaryType"
+            android:layout_below="@+id/editPrimaryType"
             android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editSecondaryType"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/secondaryType"
+            android:layout_alignStart="@+id/editName" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -146,8 +228,16 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Move1"
             android:id="@+id/move1"
-            android:layout_below="@+id/secondaryType"
+            android:layout_below="@+id/editSecondaryType"
             android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editMove1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/move1"
+            android:layout_alignStart="@+id/editName" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -155,8 +245,16 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Move2"
             android:id="@+id/move2"
-            android:layout_below="@+id/move1"
-            android:layout_alignParentStart="true" />
+            android:layout_below="@+id/editMove1"
+            android:layout_alignStart="@+id/move4" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editMove2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/editName"
+            android:layout_alignTop="@+id/move2" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -164,8 +262,16 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Move3"
             android:id="@+id/move3"
-            android:layout_below="@+id/move2"
+            android:layout_below="@+id/editMove2"
             android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editMove3"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/move3"
+            android:layout_alignStart="@+id/editName" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -173,17 +279,33 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Move4"
             android:id="@+id/move4"
-            android:layout_below="@+id/move3"
-            android:layout_alignParentStart="true" />
+            android:layout_below="@+id/editMove3"
+            android:layout_alignStart="@+id/specialAttack" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editMove4"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/move4"
+            android:layout_alignStart="@+id/editName" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/nature"
-            android:layout_below="@+id/move4"
-            android:layout_alignParentStart="true"
-            android:text="Nature" />
+            android:text="Nature"
+            android:layout_below="@+id/editMove4"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editNature"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/editName"
+            android:layout_alignTop="@+id/nature" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -191,8 +313,16 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Pokemon Item"
             android:id="@+id/pokemonItem"
-            android:layout_below="@+id/nature"
+            android:layout_below="@+id/editNature"
             android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editPokemonItem"
+            android:layout_alignEnd="@+id/editSpecialAttack"
+            android:layout_alignTop="@+id/pokemonItem"
+            android:layout_alignStart="@+id/editName" />
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -204,5 +334,16 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             android:layout_alignEnd="@+id/relativeLayout" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finish Adding"
+            android:id="@+id/finishAdding"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/description"
+            android:layout_below="@+id/editPokemonItem" />
+
+
     </RelativeLayout>
 </ScrollView>
