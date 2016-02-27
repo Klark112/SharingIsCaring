@@ -90,53 +90,33 @@
             android:text="A pokemon description will populate this textview element.  It may be a longer passage, and take more than a single line.  This may also be replaced with a series of textview elements that represent the Pokemon&apos;s attributes to the user."
             android:id="@+id/textView22"
             android:textColor="@color/text"
-            android:background="@color/background"
+            android:background="@color/editableText"
             android:layout_marginLeft="35dp"
             android:layout_marginRight="35dp"
             android:padding="10dp"
             android:layout_marginTop="10dp" />
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Offers"
-        android:id="@+id/textView23"
+        android:text="Save"
+        android:id="@+id/button8"
+        android:layout_gravity="center_horizontal"
         android:layout_weight="0.03"
-        android:layout_marginLeft="@dimen/left_pad"
-        android:layout_marginTop="10dp"
         android:textColor="@color/text"
-        android:textStyle="bold" />
+        android:background="@color/button"
+        android:layout_marginTop="20dp" />
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
+    <Button
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.20">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="&lt;user name>"
-            android:id="@+id/textView24"
-            android:layout_weight="0.03"
-            android:textColor="@color/text"
-            android:background="@color/button"
-            android:layout_marginLeft="40dp"
-            android:textSize="20dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="$&lt;rate>/hr"
-            android:id="@+id/textView25"
-            android:layout_weight="0.03"
-            android:layout_marginRight="40dp"
-            android:background="@color/button"
-            android:textColor="@color/text"
-            android:textAlignment="textEnd"
-            android:textSize="20dp" />
-    </LinearLayout>
+        android:text="Make Available"
+        android:id="@+id/button9"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.03"
+        android:background="@color/button"
+        android:textColor="@color/text"
+        android:layout_marginTop="5dp" />
 
 </LinearLayout>
