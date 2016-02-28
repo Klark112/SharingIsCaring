@@ -428,6 +428,7 @@
             android:layout_height="wrap_content"
             android:text="Finish Adding"
             android:id="@+id/finishAdding"
+            android:onClick="FinishAdding"
             android:textColor="#EAEAEA"
             android:background="#121212"
             android:layout_alignParentBottom="true"
