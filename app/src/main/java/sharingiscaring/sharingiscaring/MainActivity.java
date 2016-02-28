@@ -19,7 +19,24 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
     }
 
-
+    //tell My PC button where to go
+    public void FinishAdding(View v){setContentView(R.layout.my_pc); }
+    //implement view button
+    View.OnClickListener finish_adding = new View.OnClickListener() {
+        public void onClick(View v) {
+            setContentView(R.layout.my_pc);
+            (findViewById(R.id.finishAdding)).setOnClickListener(finish_adding);
+        }
+    };
+    //tell My PC button where to go
+    public void MyPC(View v){setContentView(R.layout.my_pc); }
+    //implement view button
+    View.OnClickListener mypc = new View.OnClickListener() {
+        public void onClick(View v) {
+            setContentView(R.layout.my_pc);
+            (findViewById(R.id.button5)).setOnClickListener(mypc);
+        }
+    };
     //tell view button where to go
     public void AddPokemon(View v){setContentView(R.layout.add_pokemon_main); }
     //implement view button

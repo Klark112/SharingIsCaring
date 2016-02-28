@@ -8,6 +8,9 @@ import java.util.ArrayList;
 public class Pokemon extends Item {
     //private ArrayList<Integer> stats; for now i am ignoring EV's and IV's
     //Should we contract the variable names to HP, Att, Def, SpA, SpD, Spe
+
+    private  String pokemonName;
+
     private String Ability;
     private int Level;
     private int HealthPoints;
@@ -96,6 +99,19 @@ public class Pokemon extends Item {
     public String getNature() {return nature;}
     public void setNature(String nature) {this.nature = nature;}
 
-    public String getPokemonItem() {return pokemonItem;}
-    public void setItem(String pokemonItem) {this.pokemonItem = pokemonItem;}
+    public String getPokemonItem() {
+        return pokemonItem;
+    }
+
+    public void setPokemonItem(String pokemonItem) {
+        this.pokemonItem = pokemonItem;
+    }
+
+    public String getPokemonName() {
+        return pokemonName;
+    }
+
+    public void setPokemonName(String pokemonName) {
+        this.pokemonName = pokemonName;
+    }
 }

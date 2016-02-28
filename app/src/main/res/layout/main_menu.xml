@@ -44,6 +44,7 @@
         android:layout_width="160dp"
         android:layout_height="75dp"
         android:text="my pc"
+        android:onClick="MyPC"
         android:background="#121212"
         android:textColor="#EAEAEA"
         android:id="@+id/button5"

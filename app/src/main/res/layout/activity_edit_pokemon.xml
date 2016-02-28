@@ -3,7 +3,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    
+
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -27,7 +27,7 @@
             android:layout_alignParentStart="true" />
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/editName"
@@ -43,20 +43,19 @@
             android:text="Description"
             android:id="@+id/description"
             android:textColor="#EAEAEA"
-            android:layout_below="@+id/editName"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="10dp"/>
+            android:layout_alignTop="@+id/editDescription"
+            android:layout_alignParentStart="true" />
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:id="@+id/editDescription"
             android:textColor="#EAEAEA"
             android:background="#666666"
             android:layout_below="@+id/editName"
             android:layout_alignParentEnd="true"
             android:layout_alignStart="@+id/editName"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="13dp"
             android:inputType="text"/>
 
         <TextView
@@ -72,7 +71,7 @@
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:id="@+id/editAbility"
             android:textColor="#EAEAEA"
             android:background="#666666"
@@ -94,7 +93,7 @@
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:id="@+id/editLevel"
             android:textColor="#EAEAEA"
             android:background="#666666"
@@ -117,7 +116,7 @@
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:id="@+id/editHealthPoints"
             android:textColor="#EAEAEA"
             android:background="#666666"
@@ -133,13 +132,12 @@
             android:text="Attack"
             android:id="@+id/attack"
             android:textColor="#EAEAEA"
-            android:layout_below="@+id/editHealthPoints"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="10dp"/>
+            android:layout_alignBottom="@+id/editAttack"
+            android:layout_alignParentStart="true" />
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:id="@+id/editAttack"
             android:textColor="#EAEAEA"
             android:background="#666666"
@@ -155,13 +153,12 @@
             android:text="Defense"
             android:id="@+id/defense"
             android:textColor="#EAEAEA"
-            android:layout_below="@+id/editAttack"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="10dp"/>
+            android:layout_alignTop="@+id/editDefense"
+            android:layout_alignParentStart="true" />
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:id="@+id/editDefense"
             android:textColor="#EAEAEA"
             android:background="#666666"
@@ -177,20 +174,19 @@
             android:text="Special Attack"
             android:id="@+id/specialAttack"
             android:textColor="#EAEAEA"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/editDefense" />
+            android:layout_below="@+id/editDefense"
+            android:layout_marginTop="14dp"
+            android:layout_alignParentStart="true" />
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:id="@+id/editSpecialAttack"
             android:textColor="#EAEAEA"
             android:background="#666666"
-            android:layout_below="@+id/editDefense"
-            android:layout_alignParentEnd="true"
-            android:layout_alignStart="@+id/editName"
-            android:layout_marginTop="10dp"/>
+            android:layout_alignBottom="@+id/specialAttack"
+            android:layout_alignEnd="@+id/editSpecialDefense"
+            android:layout_alignStart="@+id/editSpecialDefense" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -199,19 +195,19 @@
             android:text="Special Defense"
             android:id="@+id/specialDefense"
             android:textColor="#EAEAEA"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/editSpecialAttack" />
+            android:layout_above="@+id/editSpeed"
+            android:layout_marginTop="14dp"
+            android:layout_alignParentStart="true" />
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:id="@+id/editSpecialDefense"
             android:textColor="#EAEAEA"
             android:background="#666666"
             android:layout_alignParentEnd="true"
             android:layout_alignStart="@+id/editName"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="17dp"
             android:layout_below="@+id/editSpecialAttack" />
 
         <TextView
@@ -221,13 +217,12 @@
             android:text="Speed"
             android:id="@+id/speed"
             android:textColor="#EAEAEA"
-            android:layout_below="@+id/editSpecialDefense"
-            android:layout_alignStart="@+id/specialDefense"
-            android:layout_marginTop="10dp"/>
+            android:layout_alignBottom="@+id/editSpeed"
+            android:layout_alignParentStart="true" />
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:id="@+id/editSpeed"
             android:textColor="#EAEAEA"
             android:background="#666666"
@@ -249,7 +244,7 @@
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:id="@+id/editPrimaryType"
             android:textColor="#EAEAEA"
             android:background="#666666"
@@ -265,13 +260,12 @@
             android:text="Secondary Type"
             android:id="@+id/secondaryType"
             android:textColor="#EAEAEA"
-            android:layout_below="@+id/editPrimaryType"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="10dp"/>
+            android:layout_alignBottom="@+id/editSecondaryType"
+            android:layout_alignParentStart="true" />
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:id="@+id/editSecondaryType"
             android:textColor="#EAEAEA"
             android:background="#666666"
@@ -293,7 +287,7 @@
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:id="@+id/editMove1"
             android:textColor="#EAEAEA"
             android:background="#666666"
@@ -315,7 +309,7 @@
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:id="@+id/editMove2"
             android:textColor="#EAEAEA"
             android:background="#666666"
@@ -337,7 +331,7 @@
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:id="@+id/editMove3"
             android:textColor="#EAEAEA"
             android:background="#666666"
@@ -359,7 +353,7 @@
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:id="@+id/editMove4"
             android:textColor="#EAEAEA"
             android:background="#666666"
@@ -381,7 +375,7 @@
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:id="@+id/editNature"
             android:textColor="#EAEAEA"
             android:background="#666666"
@@ -403,7 +397,7 @@
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:id="@+id/editPokemonItem"
             android:textColor="#EAEAEA"
             android:background="#666666"
@@ -426,14 +420,15 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Finish Adding"
-            android:id="@+id/finishAdding"
-            android:onClick="FinishAdding"
+            android:text="Finish Editing"
+            android:id="@+id/finishEditing"
+            android:onClick="FinishEditing"
             android:textColor="#EAEAEA"
             android:background="#121212"
             android:layout_alignParentBottom="true"
             android:layout_toEndOf="@+id/description"
-            android:layout_below="@+id/editPokemonItem" />
+            android:layout_below="@+id/editPokemonItem"
+            />
 
 
     </RelativeLayout>
