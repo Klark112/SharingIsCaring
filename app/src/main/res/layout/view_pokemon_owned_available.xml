@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:text="&lt;Pokemon Name>"
         android:textColor="@color/text"
-        android:id="@+id/poke"
+        android:id="@+id/textNameOA"
         android:autoText="false"
         style="@style/Base.DialogWindowTitle.AppCompat"
         android:textAppearance="@android:style/TextAppearance.Large"
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Owner: "
-            android:id="@+id/textView17"
+            android:id="@+id/textOwnerIOA"
             android:textColor="@color/text"
             android:paddingLeft="35dp" />
 
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="&lt;Owner Name>"
-            android:id="@+id/textView18"
+            android:id="@+id/textOwnerIIOA"
             android:textColor="@color/text" />
     </LinearLayout>
 
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Status: "
-            android:id="@+id/textView19"
+            android:id="@+id/textStatusIOA"
             android:textColor="@color/text"
             android:paddingLeft="35dp" />
 
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Available"
-            android:id="@+id/textView20"
+            android:id="@+id/textStatusIIOA"
             android:textColor="@color/text" />
 
     </LinearLayout>
@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Description"
-        android:id="@+id/textView21"
+        android:id="@+id/textDescriptionIOA"
         android:paddingLeft="35dp"
         android:textColor="@color/text"
         android:textSize="24dp"
@@ -88,7 +88,7 @@
             android:layout_width="311dp"
             android:layout_height="200dp"
             android:text="A pokemon description will populate this textview element.  It may be a longer passage, and take more than a single line.  This may also be replaced with a series of textview elements that represent the Pokemon&apos;s attributes to the user."
-            android:id="@+id/textView22"
+            android:id="@+id/textDescriptionIIOA"
             android:textColor="@color/text"
             android:background="@color/background"
             android:layout_marginLeft="35dp"
@@ -106,7 +106,7 @@
             android:layout_width="fill_parent"
             android:layout_height="35dp"
             android:text="Make Unavailable"
-            android:id="@+id/button10"
+            android:id="@+id/buttonUnavailable"
             android:textColor="@color/text"
             android:layout_marginLeft="35dp"
             android:layout_marginRight="35dp"
@@ -118,7 +118,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Offers"
-        android:id="@+id/textView23"
+        android:id="@+id/textOffers"
         android:layout_weight="0.03"
         android:layout_marginLeft="@dimen/left_pad"
         android:layout_marginTop="10dp"
@@ -135,7 +135,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="&lt;user name>"
-            android:id="@+id/textView24"
+            android:id="@+id/textOfferUser"
             android:layout_weight="0.03"
             android:textColor="@color/text"
             android:background="@color/button"
@@ -146,7 +146,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="$&lt;rate>/hr"
-            android:id="@+id/textView25"
+            android:id="@+id/textOfferRate"
             android:layout_weight="0.03"
             android:layout_marginRight="40dp"
             android:background="@color/button"
@@ -165,7 +165,7 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:text="Accept"
-            android:id="@+id/button11"
+            android:id="@+id/buttonAcceptBid"
             android:layout_marginLeft="50dp"
             android:background="@color/button"
             android:textColor="@color/text" />
@@ -174,7 +174,7 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:text="Decline"
-            android:id="@+id/button12"
+            android:id="@+id/buttonDeclineBid"
             android:layout_marginRight="50dp"
             android:layout_marginLeft="100dp"
             android:background="@color/button"
