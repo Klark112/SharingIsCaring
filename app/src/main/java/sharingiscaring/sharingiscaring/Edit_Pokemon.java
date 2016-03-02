@@ -44,7 +44,8 @@ public class Edit_Pokemon extends AppCompatActivity {
         //We do not have any Select_item Activity yet
         //selection_identifier is the index to let us know which item we have selected
         // to edit
-        show_original_data=entry.get(SelectActivity.selection_identifier);
+
+        //show_original_data=entry.get(SelectActivity.selection_identifier);
 
         //Allow user to use Edit Text to change the original data
         final TextView EditPokemonName = (TextView) findViewById(R.id.editName);
@@ -148,10 +149,10 @@ public class Edit_Pokemon extends AppCompatActivity {
                     //At here, moves has to be a "Move" type, Still have trouble to figure out how
                     //to convert move from "String" to "Move" type.
 
-                    show_original_data.setMove1(Move1);
-                    show_original_data.setMove2(Move2);
-                    show_original_data.setMove3(Move3);
-                    show_original_data.setMove4(Move4);
+                    //show_original_data.setMove1(Move1);
+                    //show_original_data.setMove2(Move2);
+                    //show_original_data.setMove3(Move3);
+                    //show_original_data.setMove4(Move4);
                     show_original_data.setNature(Nature);
                     show_original_data.setPokemonItem(PokemonItem);
 

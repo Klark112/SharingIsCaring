@@ -87,7 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:hint="<?.??>"
+            android:hint="&lt;?.??>"
             android:id="@+id/textOfferAmountITP"
             android:textColor="@color/text" />
 
