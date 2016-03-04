@@ -153,6 +153,11 @@ public class Edit_Pokemon extends AppCompatActivity {
                     //show_original_data.setMove2(Move2);
                     //show_original_data.setMove3(Move3);
                     //show_original_data.setMove4(Move4);
+                    stringValues.add(Move1);
+                    stringValues.add(Move2);
+                    stringValues.add(Move3);
+                    stringValues.add(Move4);
+
                     show_original_data.setNature(Nature);
                     show_original_data.setPokemonItem(PokemonItem);
 
