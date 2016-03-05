@@ -8,6 +8,9 @@ import java.util.ArrayList;
 public class Pokemon extends Item {
     //private ArrayList<Integer> stats; for now i am ignoring EV's and IV's
     //Should we contract the variable names to HP, Att, Def, SpA, SpD, Spe
+
+    private  String pokemonName;
+
     private String Ability;
     private int Level;
     private int HealthPoints;
@@ -18,10 +21,10 @@ public class Pokemon extends Item {
     private int Speed;
     private String PrimaryType;
     private String SecondaryType;
-    private Move move1;
-    private Move move2;
-    private Move move3;
-    private Move move4;
+    private String move1;
+    private String move2;
+    private String move3;
+    private String move4;
     //should we give nature and item their own class because the impact the stats
     private String nature;
     // talk with group about using items or not due to variety and ease of implementation
@@ -30,8 +33,8 @@ public class Pokemon extends Item {
     public Pokemon(int identifier, User owner, String title, String description,
                    ArrayList<Bid> bids, String ability, int level, int healthPoints, int attack,
                    int defense, int specialAttack, int specialDefense, int speed,
-                   String primaryType, String secondaryType,Move move1, Move move2,
-                   Move move3, Move move4, String nature, String pokemonItem) {
+                   String primaryType, String secondaryType,String move1, String move2,
+                   String move3, String move4, String nature, String pokemonItem) {
         super(identifier, owner, title, description, bids);
         Ability = ability;
         Level = level;
@@ -81,21 +84,34 @@ public class Pokemon extends Item {
     public String getSecondaryType() {return SecondaryType;}
     public void setSecondaryType(String secondaryType) {SecondaryType = secondaryType;}
 
-    public Move getMove1() {return move1;}
-    public void setMove1(Move move1) {this.move1 = move1;}
+    public String getMove1() {return move1;}
+    public void setMove1(String move1) {this.move1 = move1;}
 
-    public Move getMove2() {return move2;}
-    public void setMove2(Move move2) {this.move2 = move2;}
+    public String getMove2() {return move2;}
+    public void setMove2(String move2) {this.move2 = move2;}
 
-    public Move getMove3() {return move3;}
-    public void setMove3(Move move3) {this.move3 = move3;}
+    public String getMove3() {return move3;}
+    public void setMove3(String move3) {this.move3 = move3;}
 
-    public Move getMove4() {return move4;}
-    public void setMove4(Move move4) {this.move4 = move4;}
+    public String getMove4() {return move4;}
+    public void setMove4(String move4) {this.move4 = move4;}
 
     public String getNature() {return nature;}
     public void setNature(String nature) {this.nature = nature;}
 
-    public String getPokemonItem() {return pokemonItem;}
-    public void setItem(String pokemonItem) {this.pokemonItem = pokemonItem;}
+    public String getPokemonItem() {
+        return pokemonItem;
+    }
+
+    public void setPokemonItem(String pokemonItem) {
+        this.pokemonItem = pokemonItem;
+    }
+
+    public String getPokemonName() {
+        return pokemonName;
+    }
+
+    public void setPokemonName(String pokemonName) {
+        this.pokemonName = pokemonName;
+    }
 }
